@@ -117,7 +117,7 @@ fn compile_linux() {
 //}
 
 fn compile_freebsd() {
-    pkg_config::probe_library("hidapi").expect("Unable to find hidapi");
+    pkg_config::probe_library("hidapi-libusb").expect("Unable to find hidapi");
     println!("cargo:rustc-cfg=libusb");
 }
 
